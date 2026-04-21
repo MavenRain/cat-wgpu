@@ -11,7 +11,7 @@ keywords = ["category-theory", "wgpu", "gpu", "compute", "kan-extension"]
 categories = ["mathematics", "science", "hardware-support", "rendering"]
 
 [dependencies]
-comp-cat-rs = { path = "../comp-cat-rs" }
+comp-cat-rs = { version = "0.5", path = "../comp-cat-rs" }
 wgpu = { version = "29", default-features = false, features = ["metal", "vulkan", "dx12", "wgsl"] }
 pollster = "0.4"
 bytemuck = { version = "1", features = ["derive"] }
