@@ -1,0 +1,30 @@
+[package]
+name = "cat-wgpu"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.87"
+description = "Categorical host layer for wgpu compute: adapter, device, buffers, shaders, and dispatches expressed as comp-cat-rs Io/Resource combinators"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/MavenRain/cat-wgpu"
+readme = "README.md"
+keywords = ["category-theory", "wgpu", "gpu", "compute", "kan-extension"]
+categories = ["mathematics", "science", "hardware-support", "rendering"]
+
+[dependencies]
+comp-cat-rs = { path = "../comp-cat-rs" }
+wgpu = { version = "29", default-features = false, features = ["metal", "vulkan", "dx12", "wgsl"] }
+pollster = "0.4"
+bytemuck = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+proptest = "1"
+
+[[example]]
+name = "vector_add"
+path = "examples/vector_add.rs"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = "warn"
+needless_pass_by_value = "warn"
+manual_map = "warn"
