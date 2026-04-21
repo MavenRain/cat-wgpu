@@ -1,6 +1,6 @@
 [package]
 name = "cat-wgpu"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 rust-version = "1.87"
 description = "Categorical host layer for wgpu compute: adapter, device, buffers, shaders, and dispatches expressed as comp-cat-rs Io/Resource combinators"

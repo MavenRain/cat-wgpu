@@ -50,8 +50,9 @@ hand-rolled `Error` enum, combinators over pattern matching on `Option`,
 exhaustive matches on enums, `if`/`else` on `bool`, no public struct fields,
 dual MIT OR Apache-2.0 license.
 
-See [CLAUDE.md](./CLAUDE.md) for the full list plus the single narrow
-`let mut` carve-out (dispatch-recording only, `src/runtime/wgpu.rs`).
+A single narrow `let mut` carve-out exists for dispatch-recording in
+`src/runtime/backend.rs`, because `wgpu`'s `ComputePass` recording API
+is entirely `&mut self`.
 
 ## Build
 
